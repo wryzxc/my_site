@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李金勇 - 个人学习与成长档案</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">加载中...</p>
+        </div>
+    </div>
+
+    <!-- 滚动进度条 -->
+    <div id="scrollProgress" class="scroll-progress"></div>
+
+    <!-- 导航栏 -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>李金勇的个人页面</span>
+            </a>
+            
+            <!-- 目录导航 -->
+            <ul id="navMenu" class="nav-menu">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#profile" class="nav-link">个人简介</a></li>
+                <li><a href="#skills" class="nav-link">技能展示</a></li>
+                <li><a href="#education" class="nav-link">学习经历</a></li>
+                <li><a href="#courses" class="nav-link">我的课程</a></li>
+                <li><a href="#projects" class="nav-link">项目案例</a></li>
+                <li><a href="#contact" class="nav-link">联系方式</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <!-- 搜索框 -->
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索课程...">
+                    <i class="fas fa-search"></i>
+                </div>
+                
+                <!-- 语言切换 -->
+                <button id="langToggle" class="btn-icon" title="切换语言">
+                    <i class="fas fa-globe"></i>
+                </button>
+                
+                <!-- 深色/浅色模式切换 -->
+                <button id="themeToggle" class="btn-icon" title="切换主题">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="mobileMenuBtn" class="btn-icon mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主页横幅 -->
+    <section id="home" class="section hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title animate-fade-in">
+                    <span class="typing-text" id="typingText">李金勇</span>
+                </h1>
+                <p class="hero-subtitle">广东科学技术职业学院 | 商学院 | 商务数据分析与应用专业</p>
+                <p class="hero-description">专注于数据分析和商务智能领域的学习与实践，希望通过技术手段解决实际业务问题。</p>
+                
+                <!-- 技能标签 -->
+                <div class="hero-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Excel</span>
+                    <span class="tag">数据可视化</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">数据采集</span>
+                    <span class="tag">供应链分析</span>
+                </div>
+
+                <!-- 行动按钮 -->
+                <div class="hero-actions">
+                    <a href="#courses" class="btn btn-primary">
+                        <i class="fas fa-book-open"></i>
+                        查看课程
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        联系我
+                    </a>
+                    <button id="downloadResume" class="btn btn-outline">
+                        <i class="fas fa-download"></i>
+                        下载简历
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 粒子背景 -->
+        <div id="particles" class="particles"></div>
+        
+        <!-- 滚动提示 -->
+        <div class="scroll-hint">
+            <span>向下滚动</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 个人简介模块 -->
+    <section id="profile" class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <i class="fas fa-user"></i>
+                个人简介
+            </h2>
+
+            <div class="profile-grid">
+                <!-- 个人信息卡片 -->
+                <div class="card glass-card animate-on-scroll expandable" id="profileCard">
+                    <div class="card-header">
+                        <h3><i class="fas fa-id-card"></i> 基本信息</h3>
+                        <button class="expand-btn" data-target="profileCard">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <ul class="info-list">
+                            <li><strong>姓名：</strong>李金勇</li>
+                            <li><strong>学校：</strong>广东科学技术职业学院</li>
+                            <li><strong>学院：</strong>商学院</li>
+                            <li><strong>专业：</strong>商务数据分析与应用</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 专业方向 -->
+                <div class="card glass-card animate-on-scroll expandable" id="majorCard">
+                    <div class="card-header">
+                        <h3><i class="fas fa-briefcase"></i> 专业方向</h3>
+                        <button class="expand-btn" data-target="majorCard">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <p>商务数据分析与应用，专注于数据采集、处理、分析和可视化，以及供应链数据分析。</p>
+                    </div>
+                </div>
+
+                <!-- 学习目标 -->
+                <div class="card glass-card animate-on-scroll expandable" id="goalCard">
+                    <div class="card-header">
+                        <h3><i class="fas fa-flag"></i> 学习目标</h3>
+                        <button class="expand-btn" data-target="goalCard">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <p>掌握数据分析核心技能，能够使用Python、SQL等工具进行数据处理和分析，为企业决策提供数据支持。</p>
+                    </div>
+                </div>
+
+                <!-- 个人优势 -->
+                <div class="card glass-card animate-on-scroll expandable" id="advantageCard">
+                    <div class="card-header">
+                        <h3><i class="fas fa-star"></i> 个人优势</h3>
+                        <button class="expand-btn" data-target="advantageCard">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i> 严谨的逻辑思维能力</li>
+                            <li><i class="fas fa-check"></i> 较强的学习能力和适应能力</li>
+                            <li><i class="fas fa-check"></i> 团队协作精神</li>
+                            <li><i class="fas fa-check"></i> 注重细节，工作认真负责</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能展示模块 -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <i class="fas fa-cogs"></i>
+                技能展示
+            </h2>
+
+            <!-- 技能标签筛选 -->
+            <div class="filter-tabs animate-on-scroll">
+                <button class="filter-tab active" data-filter="all">全部技能</button>
+                <button class="filter-tab" data-filter="programming">编程语言</button>
+                <button class="filter-tab" data-filter="tools">工具软件</button>
+                <button class="filter-tab" data-filter="analysis">数据分析</button>
+                <button class="filter-tab" data-filter="business">商务应用</button>
+            </div>
+
+            <!-- 技能雷达图 -->
+            <div class="skills-radar animate-on-scroll">
+                <div class="radar-container">
+                    <canvas id="skillsRadar"></canvas>
+                </div>
+            </div>
+
+            <!-- 技能卡片网格 -->
+            <div class="skills-grid" id="skillsGrid">
+                <!-- Python -->
+                <div class="skill-card glass-card animate-on-scroll" data-category="programming">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h4>Python</h4>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85">
+                            <span class="progress-fill" style="width: 85%"></span>
+                        </div>
+                        <span class="progress-text">85%</span>
+                    </div>
+                    <p class="skill-desc">熟练使用 Python 进行数据处理和分析，掌握 Pandas、NumPy 等库</p>
+                </div>
+
+                <!-- Excel -->
+                <div class="skill-card glass-card animate-on-scroll" data-category="tools">
+                    <div class="skill-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h4>Excel</h4>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="90">
+                            <span class="progress-fill" style="width: 90%"></span>
+                        </div>
+                        <span class="progress-text">90%</span>
+                    </div>
+                    <p class="skill-desc">精通 Excel 高级函数、数据透视表、数据可视化</p>
+                </div>
+
+                <!-- SQL -->
+                <div class="skill-card glass-card animate-on-scroll" data-category="programming">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>SQL</h4>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="80">
+                            <span class="progress-fill" style="width: 80%"></span>
+                        </div>
+                        <span class="progress-text">80%</span>
+                    </div>
+                    <p class="skill-desc">掌握 SQL 查询、数据库设计、数据建模</p>
+                </div>
+
+                <!-- 数据可视化 -->
+                <div class="skill-card glass-card animate-on-scroll" data-category="analysis">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4>数据可视化</h4>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="88">
+                            <span class="progress-fill" style="width: 88%"></span>
+                        </div>
+                        <span class="progress-text">88%</span>
+                    </div>
+                    <p class="skill-desc">熟练使用 Matplotlib、ECharts 等工具进行数据可视化</p>
+                </div>
+
+                <!-- 数据采集 -->
+                <div class="skill-card glass-card animate-on-scroll" data-category="analysis">
+                    <div class="skill-icon">
+                        <i class="fas fa-spider"></i>
+                    </div>
+                    <h4>数据采集</h4>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="75">
+                            <span class="progress-fill" style="width: 75%"></span>
+                        </div>
+                        <span class="progress-text">75%</span>
+                    </div>
+                    <p class="skill-desc">使用 Requests、BeautifulSoup、Scrapy 进行网络数据采集</p>
+                </div>
+
+                <!-- 供应链分析 -->
+                <div class="skill-card glass-card animate-on-scroll" data-category="business">
+                    <div class="skill-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>供应链分析</h4>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="82">
+                            <span class="progress-fill" style="width: 82%"></span>
+                        </div>
+                        <span class="progress-text">82%</span>
+                    </div>
+                    <p class="skill-desc">掌握供应链数据分析、需求预测、库存优化方法</p>
+                </div>
+
+                <!-- 统计分析 -->
+                <div class="skill-card glass-card animate-on-scroll" data-category="analysis">
+                    <div class="skill-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h4>统计分析</h4>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="78">
+                            <span class="progress-fill" style="width: 78%"></span>
+                        </div>
+                        <span class="progress-text">78%</span>
+                    </div>
+                    <p class="skill-desc">掌握描述统计、假设检验、相关分析等统计方法</p>
+                </div>
+
+                <!-- Tableau -->
+                <div class="skill-card glass-card animate-on-scroll" data-category="tools">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Tableau</h4>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="70">
+                            <span class="progress-fill" style="width: 70%"></span>
+                        </div>
+                        <span class="progress-text">70%</span>
+                    </div>
+                    <p class="skill-desc">使用 Tableau 创建交互式数据仪表盘</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学习与实践经历 -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <i class="fas fa-graduation-cap"></i>
+                学习与实践经历
+            </h2>
+
+            <div class="timeline-grid">
+                <!-- 学习经历时间轴 -->
+                <div class="timeline-section animate-on-scroll">
+                    <h3><i class="fas fa-graduation-cap"></i> 学习经历</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2023 - 至今</span>
+                                <h4>商务数据分析与应用专业</h4>
+                                <p class="timeline-place">广东科学技术职业学院</p>
+                                <p>学习数据分析、数据库、供应链管理等相关课程，掌握数据分析核心技能。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 实践经历时间轴 -->
+                <div class="timeline-section animate-on-scroll">
+                    <h3><i class="fas fa-briefcase"></i> 实践经历</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2025</span>
+                                <h4>数据分析项目</h4>
+                                <p>使用 Python 和 Pandas 进行数据清洗和分析，生成可视化报告。</p>
+                                <div class="tags">
+                                    <span class="tag-small">Python</span>
+                                    <span class="tag-small">Pandas</span>
+                                    <span class="tag-small">Matplotlib</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2025</span>
+                                <h4>供应链数据调研</h4>
+                                <p>调研供应链数据，分析物流效率，提出优化建议。</p>
+                                <div class="tags">
+                                    <span class="tag-small">Excel</span>
+                                    <span class="tag-small">供应链分析</span>
+                                    <span class="tag-small">数据可视化</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程模块 -->
+    <section id="courses" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <i class="fas fa-book"></i>
+                我的课程
+            </h2>
+
+            <!-- 课程筛选和布局切换 -->
+            <div class="course-controls animate-on-scroll">
+                <div class="course-filters">
+                    <button class="filter-btn active" data-filter="all">全部课程</button>
+                    <button class="filter-btn" data-filter="programming">编程技术</button>
+                    <button class="filter-btn" data-filter="analysis">数据分析</button>
+                    <button class="filter-btn" data-filter="business">商务应用</button>
+                </div>
+                <div class="layout-toggle">
+                    <button class="layout-btn active" data-layout="grid" title="网格布局">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="layout-btn" data-layout="list" title="列表布局">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 课程卡片网格 -->
+            <div class="courses-grid grid-layout" id="coursesGrid">
+                <!-- Python 基础 -->
+                <div class="course-card glass-card animate-on-scroll" data-category="programming" data-id="python-basics">
+                    <div class="course-badge">编程技术</div>
+                    <div class="course-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python基础</h3>
+                    <p class="course-desc">Python编程语言的基础知识和应用</p>
+                    
+                    <div class="course-info">
+                        <div class="course-progress-info">
+                            <span class="progress-label">学习进度</span>
+                            <div class="progress-bar-small">
+                                <div class="progress-fill-small" style="width: 85%"></div>
+                            </div>
+                            <span class="progress-value">85%</span>
+                        </div>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+                    </div>
+
+                    <div class="course-tags">
+                        <span class="tag-small">Python语法</span>
+                        <span class="tag-small">数据结构</span>
+                        <span class="tag-small">函数编程</span>
+                    </div>
+
+                    <div class="course-actions">
+                        <button class="btn btn-small btn-outline course-preview-btn">
+                            <i class="fas fa-eye"></i> 预览
+                        </button>
+                        <button class="btn btn-small btn-primary course-detail-btn">
+                            <i class="fas fa-arrow-right"></i> 详情
+                        </button>
+                    </div>
+
+                    <div class="course-expanded">
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-info-circle"></i> 课程简介</h4>
+                            <p>学习Python编程语言的基本语法、数据类型、控制流、函数、模块等基础知识，掌握Python编程技能，为数据分析打下基础。</p>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-star"></i> 核心技能</h4>
+                            <ul>
+                                <li>Python语法</li>
+                                <li>数据结构</li>
+                                <li>函数编程</li>
+                                <li>文件操作</li>
+                            </ul>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-bullseye"></i> 学习目标</h4>
+                            <p>通过实际项目练习，编写小型数据处理脚本，解决简单的数据分析问题。</p>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-book-open"></i> 学习内容</h4>
+                            <ol>
+                                <li>Python语言简介</li>
+                                <li>基本数据类型和变量</li>
+                                <li>控制流和循环</li>
+                                <li>函数和模块</li>
+                                <li>文件操作</li>
+                                <li>异常处理</li>
+                                <li>面向对象编程基础</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 数据分析技术 -->
+                <div class="course-card glass-card animate-on-scroll" data-category="analysis" data-id="data-analysis">
+                    <div class="course-badge">数据分析</div>
+                    <div class="course-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>数据分析技术</h3>
+                    <p class="course-desc">数据处理和分析的核心技术</p>
+                    
+                    <div class="course-info">
+                        <div class="course-progress-info">
+                            <span class="progress-label">学习进度</span>
+                            <div class="progress-bar-small">
+                                <div class="progress-fill-small" style="width: 80%"></div>
+                            </div>
+                            <span class="progress-value">80%</span>
+                        </div>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+
+                    <div class="course-tags">
+                        <span class="tag-small">NumPy</span>
+                        <span class="tag-small">Pandas</span>
+                        <span class="tag-small">Matplotlib</span>
+                    </div>
+
+                    <div class="course-actions">
+                        <button class="btn btn-small btn-outline course-preview-btn">
+                            <i class="fas fa-eye"></i> 预览
+                        </button>
+                        <button class="btn btn-small btn-primary course-detail-btn">
+                            <i class="fas fa-arrow-right"></i> 详情
+                        </button>
+                    </div>
+
+                    <div class="course-expanded">
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-info-circle"></i> 课程简介</h4>
+                            <p>学习数据清洗、数据可视化、统计分析等核心数据分析技术，掌握使用Python库进行数据分析的能力。</p>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-star"></i> 核心技能</h4>
+                            <ul>
+                                <li>NumPy</li>
+                                <li>Pandas</li>
+                                <li>Matplotlib</li>
+                                <li>统计分析</li>
+                            </ul>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-bullseye"></i> 学习目标</h4>
+                            <p>通过实际数据集，进行数据清洗、分析和可视化，生成分析报告。</p>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-book-open"></i> 学习内容</h4>
+                            <ol>
+                                <li>数据分析概述</li>
+                                <li>NumPy库的使用</li>
+                                <li>Pandas库的使用</li>
+                                <li>数据可视化技术</li>
+                                <li>统计分析基础</li>
+                                <li>机器学习入门</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 数据采集与处理 -->
+                <div class="course-card glass-card animate-on-scroll" data-category="analysis" data-id="data-collection">
+                    <div class="course-badge">数据分析</div>
+                    <div class="course-icon">
+                        <i class="fas fa-spider"></i>
+                    </div>
+                    <h3>数据采集与处理</h3>
+                    <p class="course-desc">网络数据采集和预处理技术</p>
+                    
+                    <div class="course-info">
+                        <div class="course-progress-info">
+                            <span class="progress-label">学习进度</span>
+                            <div class="progress-bar-small">
+                                <div class="progress-fill-small" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-value">75%</span>
+                        </div>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                        </div>
+                    </div>
+
+                    <div class="course-tags">
+                        <span class="tag-small">Requests</span>
+                        <span class="tag-small">BeautifulSoup</span>
+                        <span class="tag-small">Scrapy</span>
+                    </div>
+
+                    <div class="course-actions">
+                        <button class="btn btn-small btn-outline course-preview-btn">
+                            <i class="fas fa-eye"></i> 预览
+                        </button>
+                        <button class="btn btn-small btn-primary course-detail-btn">
+                            <i class="fas fa-arrow-right"></i> 详情
+                        </button>
+                    </div>
+
+                    <div class="course-expanded">
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-info-circle"></i> 课程简介</h4>
+                            <p>学习网络爬虫技术、数据采集工具使用、数据预处理方法，掌握从网络获取数据并进行处理的能力。</p>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-star"></i> 核心技能</h4>
+                            <ul>
+                                <li>Requests</li>
+                                <li>BeautifulSoup</li>
+                                <li>Scrapy</li>
+                                <li>数据清洗</li>
+                            </ul>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-bullseye"></i> 学习目标</h4>
+                            <p>编写网络爬虫，采集公开数据，并进行清洗和预处理。</p>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-book-open"></i> 学习内容</h4>
+                            <ol>
+                                <li>数据采集概述</li>
+                                <li>Requests库的使用</li>
+                                <li>BeautifulSoup库的使用</li>
+                                <li>Scrapy框架入门</li>
+                                <li>数据清洗技术</li>
+                                <li>数据预处理方法</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 供应链数据分析 -->
+                <div class="course-card glass-card animate-on-scroll" data-category="business" data-id="supply-chain">
+                    <div class="course-badge">商务应用</div>
+                    <div class="course-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>供应链数据分析</h3>
+                    <p class="course-desc">供应链管理中的数据分析应用</p>
+                    
+                    <div class="course-info">
+                        <div class="course-progress-info">
+                            <span class="progress-label">学习进度</span>
+                            <div class="progress-bar-small">
+                                <div class="progress-fill-small" style="width: 82%"></div>
+                            </div>
+                            <span class="progress-value">82%</span>
+                        </div>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+                    </div>
+
+                    <div class="course-tags">
+                        <span class="tag-small">需求预测</span>
+                        <span class="tag-small">库存优化</span>
+                        <span class="tag-small">物流分析</span>
+                    </div>
+
+                    <div class="course-actions">
+                        <button class="btn btn-small btn-outline course-preview-btn">
+                            <i class="fas fa-eye"></i> 预览
+                        </button>
+                        <button class="btn btn-small btn-primary course-detail-btn">
+                            <i class="fas fa-arrow-right"></i> 详情
+                        </button>
+                    </div>
+
+                    <div class="course-expanded">
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-info-circle"></i> 课程简介</h4>
+                            <p>学习供应链管理理论和数据分析方法，掌握供应链数据分析技能，为供应链优化提供数据支持。</p>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-star"></i> 核心技能</h4>
+                            <ul>
+                                <li>需求预测</li>
+                                <li>库存优化</li>
+                                <li>物流分析</li>
+                                <li>供应链绩效评估</li>
+                            </ul>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-bullseye"></i> 学习目标</h4>
+                            <p>分析供应链数据，识别优化机会，提出改进方案。</p>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-book-open"></i> 学习内容</h4>
+                            <ol>
+                                <li>供应链管理概述</li>
+                                <li>供应链数据采集</li>
+                                <li>需求预测模型</li>
+                                <li>库存优化分析</li>
+                                <li>物流路径优化</li>
+                                <li>供应链绩效评估</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 数据库原理与应用 -->
+                <div class="course-card glass-card animate-on-scroll" data-category="programming" data-id="database">
+                    <div class="course-badge">编程技术</div>
+                    <div class="course-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>数据库原理与应用</h3>
+                    <p class="course-desc">数据库系统的基本原理和实际应用</p>
+                    
+                    <div class="course-info">
+                        <div class="course-progress-info">
+                            <span class="progress-label">学习进度</span>
+                            <div class="progress-bar-small">
+                                <div class="progress-fill-small" style="width: 80%"></div>
+                            </div>
+                            <span class="progress-value">80%</span>
+                        </div>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                        </div>
+                    </div>
+
+                    <div class="course-tags">
+                        <span class="tag-small">SQL</span>
+                        <span class="tag-small">数据库设计</span>
+                        <span class="tag-small">数据建模</span>
+                    </div>
+
+                    <div class="course-actions">
+                        <button class="btn btn-small btn-outline course-preview-btn">
+                            <i class="fas fa-eye"></i> 预览
+                        </button>
+                        <button class="btn btn-small btn-primary course-detail-btn">
+                            <i class="fas fa-arrow-right"></i> 详情
+                        </button>
+                    </div>
+
+                    <div class="course-expanded">
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-info-circle"></i> 课程简介</h4>
+                            <p>学习数据库基本原理、SQL语言、数据库设计，掌握数据库操作和管理技能。</p>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-star"></i> 核心技能</h4>
+                            <ul>
+                                <li>SQL</li>
+                                <li>数据库设计</li>
+                                <li>数据建模</li>
+                                <li>数据库优化</li>
+                            </ul>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-bullseye"></i> 学习目标</h4>
+                            <p>设计数据库 schema，编写 SQL 查询，进行数据管理。</p>
+                        </div>
+                        <div class="expanded-section">
+                            <h4><i class="fas fa-book-open"></i> 学习内容</h4>
+                            <ol>
+                                <li>数据库系统概述</li>
+                                <li>关系型数据库基础</li>
+                                <li>SQL语言基础</li>
+                                <li>数据库设计原理</li>
+                                <li>索引和优化</li>
+                                <li>NoSQL数据库简介</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 课程对比表格 -->
+            <div class="section-subtitle animate-on-scroll">
+                <h3><i class="fas fa-table"></i> 课程对比</h3>
+            </div>
+            <div class="table-container animate-on-scroll">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>课程名称</th>
+                            <th>类别</th>
+                            <th>学习进度</th>
+                            <th>评分</th>
+                            <th>核心技能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Python基础</strong></td>
+                            <td><span class="tag-small">编程技术</span></td>
+                            <td>
+                                <div class="progress-bar-table">
+                                    <div class="progress-fill-table" style="width: 85%"></div>
+                                </div>
+                                85%
+                            </td>
+                            <td>4.8</td>
+                            <td>Python语法、数据结构、函数编程</td>
+                        </tr>
+                        <tr>
+                            <td><strong>数据分析技术</strong></td>
+                            <td><span class="tag-small">数据分析</span></td>
+                            <td>
+                                <div class="progress-bar-table">
+                                    <div class="progress-fill-table" style="width: 80%"></div>
+                                </div>
+                                80%
+                            </td>
+                            <td>4.9</td>
+                            <td>NumPy、Pandas、Matplotlib</td>
+                        </tr>
+                        <tr>
+                            <td><strong>数据采集与处理</strong></td>
+                            <td><span class="tag-small">数据分析</span></td>
+                            <td>
+                                <div class="progress-bar-table">
+                                    <div class="progress-fill-table" style="width: 75%"></div>
+                                </div>
+                                75%
+                            </td>
+                            <td>4.7</td>
+                            <td>Requests、BeautifulSoup、Scrapy</td>
+                        </tr>
+                        <tr>
+                            <td><strong>供应链数据分析</strong></td>
+                            <td><span class="tag-small">商务应用</span></td>
+                            <td>
+                                <div class="progress-bar-table">
+                                    <div class="progress-fill-table" style="width: 82%"></div>
+                                </div>
+                                82%
+                            </td>
+                            <td>4.8</td>
+                            <td>需求预测、库存优化、物流分析</td>
+                        </tr>
+                        <tr>
+                            <td><strong>数据库原理与应用</strong></td>
+                            <td><span class="tag-small">编程技术</span></td>
+                            <td>
+                                <div class="progress-bar-table">
+                                    <div class="progress-fill-table" style="width: 80%"></div>
+                                </div>
+                                80%
+                            </td>
+                            <td>4.7</td>
+                            <td>SQL、数据库设计、数据建模</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目案例展示 -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <i class="fas fa-project-diagram"></i>
+                项目案例展示
+            </h2>
+
+            <!-- 案例轮播图 -->
+            <div class="projects-carousel animate-on-scroll">
+                <div class="carousel-container" id="projectsCarousel">
+                    <!-- 案例 1 -->
+                    <div class="carousel-item glass-card">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>销售数据分析仪表盘</h3>
+                        <p>使用 Python 和 Matplotlib 制作的销售数据可视化仪表盘，展示销售趋势、产品分布、区域业绩等信息。</p>
+                        <div class="project-tags">
+                            <span class="tag-small">Python</span>
+                            <span class="tag-small">Matplotlib</span>
+                            <span class="tag-small">数据可视化</span>
+                        </div>
+                        <button class="btn btn-small btn-outline">
+                            <i class="fas fa-external-link-alt"></i> 查看详情
+                        </button>
+                    </div>
+
+                    <!-- 案例 2 -->
+                    <div class="carousel-item glass-card">
+                        <div class="project-icon">
+                            <i class="fas fa-spider"></i>
+                        </div>
+                        <h3>电商商品数据采集系统</h3>
+                        <p>使用 Scrapy 框架开发的电商商品数据采集系统，自动采集商品信息、价格、销量等数据。</p>
+                        <div class="project-tags">
+                            <span class="tag-small">Scrapy</span>
+                            <span class="tag-small">Python</span>
+                            <span class="tag-small">数据采集</span>
+                        </div>
+                        <button class="btn btn-small btn-outline">
+                            <i class="fas fa-external-link-alt"></i> 查看详情
+                        </button>
+                    </div>
+
+                    <!-- 案例 3 -->
+                    <div class="carousel-item glass-card">
+                        <div class="project-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h3>库存优化分析报告</h3>
+                        <p>基于历史销售数据，使用统计方法进行库存需求预测，优化库存水平，降低库存成本。</p>
+                        <div class="project-tags">
+                            <span class="tag-small">Excel</span>
+                            <span class="tag-small">统计分析</span>
+                            <span class="tag-small">库存优化</span>
+                        </div>
+                        <button class="btn btn-small btn-outline">
+                            <i class="fas fa-external-link-alt"></i> 查看详情
+                        </button>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevProject">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn" id="nextProject">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+
+            <!-- 作品案例网格 -->
+            <h3 class="section-subtitle animate-on-scroll">
+                <i class="fas fa-images"></i> 图表作品展示
+            </h3>
+            <div class="charts-grid animate-on-scroll">
+                <div class="chart-card glass-card">
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-line"></i>
+                        <p>销售趋势图</p>
+                    </div>
+                </div>
+                <div class="chart-card glass-card">
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-bar"></i>
+                        <p>产品销量对比</p>
+                    </div>
+                </div>
+                <div class="chart-card glass-card">
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-pie"></i>
+                        <p>市场份额占比</p>
+                    </div>
+                </div>
+                <div class="chart-card glass-card">
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-area"></i>
+                        <p>库存变化曲线</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学习资源推荐 -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <i class="fas fa-lightbulb"></i>
+                学习资源推荐
+            </h2>
+
+            <div class="resource-grid">
+                <!-- 常用工具推荐 -->
+                <div class="resource-card glass-card animate-on-scroll">
+                    <h3><i class="fas fa-tools"></i> 常用工具推荐</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <i class="fab fa-python"></i>
+                            <div>
+                                <strong>Python</strong>
+                                <p>数据分析首选编程语言</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-file-excel"></i>
+                            <div>
+                                <strong>Excel</strong>
+                                <p>强大的电子表格工具</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-database"></i>
+                            <div>
+                                <strong>MySQL</strong>
+                                <p>开源关系型数据库</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <strong>Tableau</strong>
+                                <p>数据可视化工具</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 行业资讯链接 -->
+                <div class="resource-card glass-card animate-on-scroll">
+                    <h3><i class="fas fa-newspaper"></i> 行业资讯链接</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <i class="fas fa-link"></i>
+                            <div>
+                                <strong><a href="#" class="resource-link">数据分析网</a></strong>
+                                <p>数据分析行业资讯和教程</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-link"></i>
+                            <div>
+                                <strong><a href="#" class="resource-link">物流与供应链管理</a></strong>
+                                <p>供应链行业动态</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-link"></i>
+                            <div>
+                                <strong><a href="#" class="resource-link">Python中文网</a></strong>
+                                <p>Python学习资源</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-link"></i>
+                            <div>
+                                <strong><a href="#" class="resource-link">知乎数据分析话题</a></strong>
+                                <p>社区讨论和经验分享</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 学习路线规划 -->
+                <div class="resource-card glass-card animate-on-scroll">
+                    <h3><i class="fas fa-route"></i> 学习路线规划</h3>
+                    <div class="roadmap">
+                        <div class="roadmap-step">
+                            <div class="roadmap-dot"></div>
+                            <div class="roadmap-content">
+                                <h4>第一阶段</h4>
+                                <p>学习 Python 基础语法和 Excel 高级技巧</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-line"></div>
+                        <div class="roadmap-step">
+                            <div class="roadmap-dot"></div>
+                            <div class="roadmap-content">
+                                <h4>第二阶段</h4>
+                                <p>学习数据库、数据采集和数据分析技术</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-line"></div>
+                        <div class="roadmap-step">
+                            <div class="roadmap-dot"></div>
+                            <div class="roadmap-content">
+                                <h4>第三阶段</h4>
+                                <p>实践项目开发，积累实际经验</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式模块 -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <i class="fas fa-address-card"></i>
+                联系方式
+            </h2>
+
+            <div class="contact-grid">
+                <!-- 联系信息 -->
+                <div class="contact-info animate-on-scroll">
+                    <h3>让我们保持联系</h3>
+                    <p>欢迎通过以下方式与我联系，共同探讨数据分析和商务智能领域的问题！</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>邮箱</h4>
+                                <p>2499963402@qq.com</p>
+                            </div>
+                            <button class="btn btn-small btn-outline copy-btn" data-text="2499963402@qq.com">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <p><a href="https://github.com/wryzxc" target="_blank" rel="noopener noreferrer">github.com/wryzxc</a></p>
+                            </div>
+                            <button class="btn btn-small btn-outline copy-btn" data-text="https://github.com/wryzxc">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 社交账号链接 -->
+                    <div class="social-links">
+                        <h4>社交账号</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon glass-card">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-icon glass-card">
+                                <i class="fab fa-weixin"></i>
+                            </a>
+                            <a href="#" class="social-icon glass-card">
+                                <i class="fab fa-weibo"></i>
+                            </a>
+                            <a href="#" class="social-icon glass-card">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 留言评论区 -->
+                <div class="contact-form animate-on-scroll">
+                    <div class="glass-card">
+                        <h3><i class="fas fa-comments"></i> 留言评论</h3>
+                        <form id="commentForm">
+                            <div class="form-group">
+                                <label for="name">您的姓名</label>
+                                <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">您的邮箱</label>
+                                <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">留言内容</label>
+                                <textarea id="message" name="message" rows="5" placeholder="请输入您的留言..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i class="fas fa-paper-plane"></i>
+                                提交留言
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 FAQ -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <i class="fas fa-question-circle"></i>
+                常见问题
+            </h2>
+
+            <div class="faq-list animate-on-scroll">
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h4>这是什么类型的网站？</h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>这是一个个人学习和成长档案网站，用于展示我的课程学习、技能展示、项目案例和联系方式。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h4>如何与我取得联系？</h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>您可以通过上方联系方式模块中的邮箱、GitHub 或者留言表单与我取得联系。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h4>网站的技术架构是什么？</h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>本网站采用纯静态 HTML + CSS + JavaScript 构建，无任何后端依赖，适合部署到 Cloudflare Pages 等静态网站托管平台。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h4>如何使用键盘快捷键导航？</h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>您可以使用方向键 ← → 在项目轮播图中切换，使用 Home/End 键快速跳转到页面顶部或底部。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 友情链接 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <i class="fas fa-link"></i>
+                友情链接
+            </h2>
+
+            <div class="friend-links animate-on-scroll">
+                <a href="https://www.gdit.edu.cn/" target="_blank" rel="noopener noreferrer" class="friend-link glass-card">
+                    <i class="fas fa-university"></i>
+                    <span>广东科学技术职业学院</span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="friend-link glass-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>商学院</span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="friend-link glass-card">
+                    <i class="fas fa-chart-line"></i>
+                    <span>数据分析学习社区</span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="friend-link glass-card">
+                    <i class="fab fa-python"></i>
+                    <span>Python中文社区</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页面底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4><i class="fas fa-graduation-cap"></i> 李金勇的个人页面</h4>
+                    <p>广东科学技术职业学院 | 商学院 | 商务数据分析与应用专业</p>
+                </div>
+
+                <div class="footer-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-eye"></i>
+                        <span id="visitorCount">1,234</span>
+                        <p>访客数</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-book"></i>
+                        <span>5</span>
+                        <p>课程数</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>3</span>
+                        <p>项目案例</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 李金勇的个人页面 | 广东科学技术职业学院</p>
+                <div class="footer-links">
+                    <a href="#home">首页</a>
+                    <span>|</span>
+                    <a href="#profile">个人简介</a>
+                    <span>|</span>
+                    <a href="#contact">联系我</a>
+                    <span>|</span>
+                    <button id="printPage" class="footer-btn">
+                        <i class="fas fa-print"></i> 打印页面
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="backToTop" class="back-to-top" title="回到顶部">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- 课程详情弹窗 -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content glass-card">
+            <div class="modal-header">
+                <h2 id="modalTitle">课程详情</h2>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- 弹窗内容动态插入 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 欢迎提示弹窗 -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content glass-card welcome-modal">
+            <div class="welcome-icon">
+                <i class="fas fa-hand-wave"></i>
+            </div>
+            <h2>欢迎访问！</h2>
+            <p>感谢您访问我的个人学习与成长档案网站。您可以使用方向键导航，支持深色/浅色模式切换。</p>
+            <div class="welcome-tips">
+                <p><i class="fas fa-keyboard"></i> 方向键导航</p>
+                <p><i class="fas fa-moon"></i> 支持深色模式</p>
+                <p><i class="fas fa-search"></i> 搜索课程功能</p>
+            </div>
+            <button class="btn btn-primary" id="closeWelcome">
+                开始探索
+            </button>
+        </div>
+    </div>
+
+    <!-- 复制成功提示 -->
+    <div id="copyToast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>复制成功！</span>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

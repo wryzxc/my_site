@@ -1133,13 +1133,47 @@ body {
 
 .carousel-item h3 {
     font-size: 1.25rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: var(--text-primary);
+}
+
+.project-date {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-bottom: 1rem !important;
+    font-weight: 500;
 }
 
 .carousel-item p {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+}
+
+.project-result {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.project-result i {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+}
+
+.highlight-result {
+    color: var(--secondary-color);
+    font-weight: 800;
+    font-size: 1.125rem;
+    background: linear-gradient(135deg, var(--secondary-color), #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .project-tags {

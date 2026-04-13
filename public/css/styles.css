@@ -372,17 +372,92 @@ body {
 .hero-content {
     position: relative;
     z-index: 10;
-    text-align: center;
+}
+
+.hero-layout {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-avatar {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar-placeholder {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    color: white;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+}
+
+.avatar-hint {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    font-style: italic;
+}
+
+.hero-text {
+    text-align: left;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
 }
 
 .hero-title {
     font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.hero-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.keyword {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.keyword i {
+    color: var(--secondary-color);
+}
+
+.tag-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white !important;
+    font-weight: 700;
+}
+
+.tag-primary i {
+    color: white !important;
 }
 
 .typing-text {
@@ -1323,6 +1398,39 @@ body {
     margin-left: 1.75rem;
 }
 
+.project-visual {
+    margin-top: 1.5rem;
+}
+
+.visual-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
+    border-radius: 16px;
+    border: 2px dashed var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.visual-placeholder:hover {
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(16, 185, 129, 0.15));
+}
+
+.visual-placeholder i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.visual-placeholder p {
+    color: var(--text-tertiary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
@@ -1534,6 +1642,37 @@ body {
 /* ==========================================
    联系方式
    ========================================== */
+.contact-cta {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.contact-cta .glass-card {
+    padding: 2.5rem;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cta-content h3 {
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cta-content p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

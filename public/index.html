@@ -67,37 +67,51 @@
     <!-- 主页横幅 -->
     <section id="home" class="section hero-section">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title animate-fade-in">
-                    <span class="typing-text" id="typingText">李金勇</span>
-                </h1>
-                <p class="hero-subtitle">数据分析师 | 商务数据分析与应用 | 供应链优化</p>
-                <p class="hero-description">用数据驱动决策，专注于电商与供应链领域的业务增长。我相信数据不仅是数字，更是优化业务的关键。</p>
+            <div class="hero-layout">
+                <!-- 专业头像 -->
+                <div class="hero-avatar animate-fade-in">
+                    <div class="avatar-placeholder">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <p class="avatar-hint">专业头像占位</p>
+                </div>
                 
-                <!-- 技能标签 -->
-                <div class="hero-tags">
-                    <span class="tag"><i class="fab fa-python"></i> Python</span>
-                    <span class="tag"><i class="fas fa-database"></i> SQL</span>
-                    <span class="tag"><i class="fas fa-chart-bar"></i> 数据可视化</span>
-                    <span class="tag"><i class="fas fa-file-excel"></i> Excel</span>
-                    <span class="tag"><i class="fas fa-truck"></i> 供应链分析</span>
-                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title animate-fade-in">
+                        <span class="typing-text" id="typingText">李金勇</span>
+                    </h1>
+                    <p class="hero-subtitle">商务数据分析师</p>
+                    <div class="hero-keywords">
+                        <span class="keyword"><i class="fas fa-check-circle"></i> 供应链优化</span>
+                        <span class="keyword"><i class="fas fa-check-circle"></i> 销售预测</span>
+                        <span class="keyword"><i class="fas fa-check-circle"></i> 数据可视化</span>
+                    </div>
+                    <p class="hero-description">用数据驱动业务决策，专注于电商与供应链领域的数据分析与优化。擅长构建预测模型、识别业务趋势，将复杂数据转化为可执行的商业洞察。</p>
+                    
+                    <!-- 核心技能标签 -->
+                    <div class="hero-tags">
+                        <span class="tag tag-primary"><i class="fab fa-python"></i> Python</span>
+                        <span class="tag tag-primary"><i class="fas fa-database"></i> SQL</span>
+                        <span class="tag"><i class="fas fa-chart-line"></i> Pandas</span>
+                        <span class="tag"><i class="fas fa-chart-pie"></i> Power BI</span>
+                        <span class="tag"><i class="fas fa-truck"></i> 供应链建模</span>
+                    </div>
 
-                <!-- 行动按钮 -->
-                <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-project-diagram"></i>
-                        查看项目案例
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i>
-                        联系我
-                    </a>
-                    <button id="downloadResume" class="btn btn-outline">
-                        <i class="fas fa-download"></i>
-                        下载简历
-                    </button>
-                </div>
+                    <!-- 行动按钮 -->
+                    <div class="hero-actions">
+                        <button id="downloadResume" class="btn btn-primary">
+                            <i class="fas fa-download"></i>
+                            下载简历
+                        </button>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-project-diagram"></i>
+                            查看项目案例
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i>
+                            联系我
+                        </a>
+                    </div>
             </div>
         </div>
 
@@ -909,7 +923,7 @@
                             <i class="fas fa-shopping-cart"></i>
                         </div>
                         <div class="project-title-section">
-                            <h3>某电商平台销售数据分析</h3>
+                            <h3>电商平台销售数据分析</h3>
                             <p class="project-meta">
                                 <i class="far fa-calendar-alt"></i> 2024.01-2024.02
                             </p>
@@ -919,30 +933,39 @@
                     <div class="project-content">
                         <div class="project-section">
                             <h4><i class="fas fa-exclamation-circle"></i> 挑战</h4>
-                            <p>业务方难以识别销售趋势，运营策略缺乏数据依据，导致资源分配不合理。</p>
+                            <p>业务方缺乏数据驱动决策能力，无法识别销售趋势和热点商品，导致促销资源错配和库存周转效率低下。</p>
                         </div>
                         
                         <div class="project-section">
                             <h4><i class="fas fa-tasks"></i> 任务</h4>
-                            <p>深入分析销售数据，识别销售趋势和热点商品，为运营决策提供数据支持。</p>
+                            <p>构建销售分析体系，识别销售趋势和热点商品，为运营策略优化提供数据支持。</p>
                         </div>
                         
                         <div class="project-section">
                             <h4><i class="fas fa-lightbulb"></i> 方案</h4>
-                            <p>使用Python进行数据清洗，利用Pandas分析销售趋势，识别热点商品，构建销售预测模型。</p>
+                            <p>使用Python清洗6个月历史销售数据，基于Pandas构建时间序列分析，开发了基于ARIMA的销售预测模型，使用Power BI设计实时监控仪表盘。</p>
                         </div>
                         
                         <div class="project-result-full">
                             <h4><i class="fas fa-trophy"></i> 成果</h4>
-                            <p>输出分析报告，针对性优化运营策略，<span class="highlight-result">提高核心品类销售额10%</span>，为业务增长提供了有力的数据支撑。</p>
+                            <p>精准识别3个核心增长品类，优化促销资源分配，<span class="highlight-result">提高核心品类销售额10%</span>，库存周转效率提升22%。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 可视化占位 -->
+                    <div class="project-visual">
+                        <div class="visual-placeholder">
+                            <i class="fas fa-chart-area"></i>
+                            <p>Power BI 销售仪表盘占位</p>
                         </div>
                     </div>
                     
                     <div class="project-tags">
                         <span class="tag-small"><i class="fab fa-python"></i> Python</span>
                         <span class="tag-small"><i class="fab fa-python"></i> Pandas</span>
-                        <span class="tag-small"><i class="fas fa-chart-line"></i> Power BI</span>
-                        <span class="tag-small"><i class="fas fa-chart-bar"></i> 数据可视化</span>
+                        <span class="tag-small"><i class="fas fa-chart-line"></i> ARIMA</span>
+                        <span class="tag-small"><i class="fas fa-chart-pie"></i> Power BI</span>
+                        <span class="tag-small"><i class="fas fa-chart-bar"></i> 时间序列</span>
                     </div>
                 </div>
 
@@ -963,29 +986,38 @@
                     <div class="project-content">
                         <div class="project-section">
                             <h4><i class="fas fa-exclamation-circle"></i> 挑战</h4>
-                            <p>库存水平不合理，部分商品缺货严重，部分商品积压过多，导致资金占用和客户满意度下降。</p>
+                            <p>库存结构失衡，滞销品占比35%，热销品频繁缺货，导致资金占用过高和客户满意度下降。</p>
                         </div>
                         
                         <div class="project-section">
                             <h4><i class="fas fa-tasks"></i> 任务</h4>
-                            <p>基于历史销售数据，进行库存需求预测，优化库存水平，降低库存成本。</p>
+                            <p>建立科学的库存分类体系，设计需求预测模型，优化安全库存水平。</p>
                         </div>
                         
                         <div class="project-section">
                             <h4><i class="fas fa-lightbulb"></i> 方案</h4>
-                            <p>使用Excel进行数据整理，应用统计方法进行需求预测，建立安全库存模型。</p>
+                            <p>应用ABC分类法对SKU进行价值分层，使用移动平均法和指数平滑法构建需求预测模型，计算经济订货批量(EOQ)，建立动态安全库存机制。</p>
                         </div>
                         
                         <div class="project-result-full">
                             <h4><i class="fas fa-trophy"></i> 成果</h4>
-                            <p>优化库存结构，<span class="highlight-result">降低库存成本15%</span>，同时提高订单满足率，改善客户体验。</p>
+                            <p>重构库存结构，<span class="highlight-result">降低库存成本15%</span>，订单满足率从82%提升至95%，滞销品占比下降至18%。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 可视化占位 -->
+                    <div class="project-visual">
+                        <div class="visual-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                            <p>库存优化分析报告占位</p>
                         </div>
                     </div>
                     
                     <div class="project-tags">
                         <span class="tag-small"><i class="fas fa-file-excel"></i> Excel</span>
-                        <span class="tag-small"><i class="fas fa-calculator"></i> 统计分析</span>
-                        <span class="tag-small"><i class="fas fa-box"></i> 库存优化</span>
+                        <span class="tag-small"><i class="fas fa-calculator"></i> ABC分类</span>
+                        <span class="tag-small"><i class="fas fa-chart-line"></i> 需求预测</span>
+                        <span class="tag-small"><i class="fas fa-box"></i> EOQ模型</span>
                         <span class="tag-small"><i class="fas fa-truck"></i> 供应链</span>
                     </div>
                 </div>
@@ -1141,14 +1173,28 @@
         <div class="container">
             <h2 class="section-title animate-on-scroll">
                 <i class="fas fa-address-card"></i>
-                联系方式
+                联系我
             </h2>
+
+            <!-- 简历下载CTA区域 -->
+            <div class="contact-cta animate-on-scroll">
+                <div class="glass-card">
+                    <div class="cta-content">
+                        <h3><i class="fas fa-briefcase"></i> 准备好合作了吗？</h3>
+                        <p>下载我的简历，了解更多关于我的技能和经历</p>
+                        <button id="downloadResumeContact" class="btn btn-primary">
+                            <i class="fas fa-download"></i>
+                            下载简历 (PDF)
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <div class="contact-grid">
                 <!-- 联系信息 -->
                 <div class="contact-info animate-on-scroll">
-                    <h3>让我们保持联系</h3>
-                    <p>欢迎通过以下方式与我联系，共同探讨数据分析和商务智能领域的问题！</p>
+                    <h3>直接联系方式</h3>
+                    <p>期待用数据为您创造价值，欢迎随时与我联系！</p>
                     
                     <div class="contact-items">
                         <div class="contact-item glass-card">
@@ -1156,7 +1202,7 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="contact-details">
-                                <h4>邮箱</h4>
+                                <h4>专业邮箱</h4>
                                 <p>2499963402@qq.com</p>
                             </div>
                             <button class="btn btn-small btn-outline copy-btn" data-text="2499963402@qq.com">
@@ -1169,7 +1215,7 @@
                                 <i class="fab fa-github"></i>
                             </div>
                             <div class="contact-details">
-                                <h4>GitHub</h4>
+                                <h4>GitHub 主页</h4>
                                 <p><a href="https://github.com/wryzxc" target="_blank" rel="noopener noreferrer">github.com/wryzxc</a></p>
                             </div>
                             <button class="btn btn-small btn-outline copy-btn" data-text="https://github.com/wryzxc">

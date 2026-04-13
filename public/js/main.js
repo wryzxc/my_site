@@ -568,9 +568,12 @@ document.getElementById('printPage')?.addEventListener('click', () => {
 // ==========================================
 // 下载简历
 // ==========================================
-document.getElementById('downloadResume')?.addEventListener('click', () => {
+function handleDownloadResume() {
     showToast('简历下载功能开发中...');
-});
+}
+
+document.getElementById('downloadResume')?.addEventListener('click', handleDownloadResume);
+document.getElementById('downloadResumeContact')?.addEventListener('click', handleDownloadResume);
 
 // ==========================================
 // 移动端菜单

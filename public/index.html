@@ -31,7 +31,7 @@
             <!-- 目录导航 -->
             <ul id="navMenu" class="nav-menu">
                 <li><a href="#home" class="nav-link active">首页</a></li>
-                <li><a href="#profile" class="nav-link">个人简介</a></li>
+                <li><a href="#profile" class="nav-link">关于我</a></li>
                 <li><a href="#skills" class="nav-link">技能展示</a></li>
                 <li><a href="#education" class="nav-link">学习经历</a></li>
                 <li><a href="#courses" class="nav-link">我的课程</a></li>
@@ -71,24 +71,23 @@
                 <h1 class="hero-title animate-fade-in">
                     <span class="typing-text" id="typingText">李金勇</span>
                 </h1>
-                <p class="hero-subtitle">广东科学技术职业学院 | 商学院 | 商务数据分析与应用专业</p>
-                <p class="hero-description">专注于数据分析和商务智能领域的学习与实践，希望通过技术手段解决实际业务问题。</p>
+                <p class="hero-subtitle">数据分析师 | 商务数据分析与应用 | 供应链优化</p>
+                <p class="hero-description">用数据驱动决策，专注于电商与供应链领域的业务增长。我相信数据不仅是数字，更是优化业务的关键。</p>
                 
                 <!-- 技能标签 -->
                 <div class="hero-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Excel</span>
-                    <span class="tag">数据可视化</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">数据采集</span>
-                    <span class="tag">供应链分析</span>
+                    <span class="tag"><i class="fab fa-python"></i> Python</span>
+                    <span class="tag"><i class="fas fa-database"></i> SQL</span>
+                    <span class="tag"><i class="fas fa-chart-bar"></i> 数据可视化</span>
+                    <span class="tag"><i class="fas fa-file-excel"></i> Excel</span>
+                    <span class="tag"><i class="fas fa-truck"></i> 供应链分析</span>
                 </div>
 
                 <!-- 行动按钮 -->
                 <div class="hero-actions">
-                    <a href="#courses" class="btn btn-primary">
-                        <i class="fas fa-book-open"></i>
-                        查看课程
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-project-diagram"></i>
+                        查看项目案例
                     </a>
                     <a href="#contact" class="btn btn-secondary">
                         <i class="fas fa-envelope"></i>
@@ -112,74 +111,105 @@
         </div>
     </section>
 
-    <!-- 个人简介模块 -->
+    <!-- 关于我模块 -->
     <section id="profile" class="section">
         <div class="container">
             <h2 class="section-title animate-on-scroll">
-                <i class="fas fa-user"></i>
-                个人简介
+                <i class="fas fa-heart"></i>
+                关于我
             </h2>
 
-            <div class="profile-grid">
-                <!-- 个人信息卡片 -->
-                <div class="card glass-card animate-on-scroll expandable" id="profileCard">
-                    <div class="card-header">
-                        <h3><i class="fas fa-id-card"></i> 基本信息</h3>
-                        <button class="expand-btn" data-target="profileCard">
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+            <div class="about-content">
+                <!-- 个人故事 -->
+                <div class="about-story glass-card animate-on-scroll">
+                    <div class="story-header">
+                        <div class="story-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="story-intro">
+                            <h3>你好，我是李金勇</h3>
+                            <p class="story-tagline">用数据发现价值，用分析驱动决策</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <ul class="info-list">
-                            <li><strong>姓名：</strong>李金勇</li>
-                            <li><strong>学校：</strong>广东科学技术职业学院</li>
-                            <li><strong>学院：</strong>商学院</li>
-                            <li><strong>专业：</strong>商务数据分析与应用</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 专业方向 -->
-                <div class="card glass-card animate-on-scroll expandable" id="majorCard">
-                    <div class="card-header">
-                        <h3><i class="fas fa-briefcase"></i> 专业方向</h3>
-                        <button class="expand-btn" data-target="majorCard">
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <p>商务数据分析与应用，专注于数据采集、处理、分析和可视化，以及供应链数据分析。</p>
+                    
+                    <div class="story-content">
+                        <p>
+                            我相信数据不仅是数字，更是优化业务的关键。作为广东科学技术职业学院商学院商务数据分析与应用专业的学生，
+                            我对数据有着深厚的热情——我喜欢从复杂的数据中发现规律，将枯燥的数字转化为有价值的洞察。
+                        </p>
+                        <p>
+                            在学习过程中，我发现数据真正的魅力在于它能解决实际问题。无论是帮助电商识别销售趋势，
+                            还是优化供应链库存，每一次用数据为业务带来提升，都让我充满成就感。
+                        </p>
+                        <p>
+                            我期待能将我的数据分析技能应用到更多实际场景中，为企业决策提供有力的数据支持，
+                            用数据创造真正的商业价值。
+                        </p>
                     </div>
                 </div>
 
-                <!-- 学习目标 -->
-                <div class="card glass-card animate-on-scroll expandable" id="goalCard">
-                    <div class="card-header">
-                        <h3><i class="fas fa-flag"></i> 学习目标</h3>
-                        <button class="expand-btn" data-target="goalCard">
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+                <!-- 个人信息网格 -->
+                <div class="profile-grid">
+                    <!-- 专业方向 -->
+                    <div class="card glass-card animate-on-scroll expandable" id="majorCard">
+                        <div class="card-header">
+                            <h3><i class="fas fa-briefcase"></i> 专业方向</h3>
+                            <button class="expand-btn" data-target="majorCard">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <p>商务数据分析与应用，专注于数据采集、处理、分析和可视化，以及供应链数据分析。</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <p>掌握数据分析核心技能，能够使用Python、SQL等工具进行数据处理和分析，为企业决策提供数据支持。</p>
-                    </div>
-                </div>
 
-                <!-- 个人优势 -->
-                <div class="card glass-card animate-on-scroll expandable" id="advantageCard">
-                    <div class="card-header">
-                        <h3><i class="fas fa-star"></i> 个人优势</h3>
-                        <button class="expand-btn" data-target="advantageCard">
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+                    <!-- 学习目标 -->
+                    <div class="card glass-card animate-on-scroll expandable" id="goalCard">
+                        <div class="card-header">
+                            <h3><i class="fas fa-flag"></i> 学习目标</h3>
+                            <button class="expand-btn" data-target="goalCard">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <p>掌握数据分析核心技能，能够使用Python、SQL等工具进行数据处理和分析，为企业决策提供数据支持。</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <ul class="check-list">
-                            <li><i class="fas fa-check"></i> 严谨的逻辑思维能力</li>
-                            <li><i class="fas fa-check"></i> 较强的学习能力和适应能力</li>
-                            <li><i class="fas fa-check"></i> 团队协作精神</li>
-                            <li><i class="fas fa-check"></i> 注重细节，工作认真负责</li>
-                        </ul>
+
+                    <!-- 个人优势 -->
+                    <div class="card glass-card animate-on-scroll expandable" id="advantageCard">
+                        <div class="card-header">
+                            <h3><i class="fas fa-star"></i> 个人优势</h3>
+                            <button class="expand-btn" data-target="advantageCard">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <ul class="check-list">
+                                <li><i class="fas fa-check"></i> 严谨的逻辑思维能力</li>
+                                <li><i class="fas fa-check"></i> 较强的学习能力和适应能力</li>
+                                <li><i class="fas fa-check"></i> 团队协作精神</li>
+                                <li><i class="fas fa-check"></i> 注重细节，工作认真负责</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 基本信息 -->
+                    <div class="card glass-card animate-on-scroll expandable" id="profileCard">
+                        <div class="card-header">
+                            <h3><i class="fas fa-id-card"></i> 基本信息</h3>
+                            <button class="expand-btn" data-target="profileCard">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <ul class="info-list">
+                                <li><strong>姓名：</strong>李金勇</li>
+                                <li><strong>学校：</strong>广东科学技术职业学院</li>
+                                <li><strong>学院：</strong>商学院</li>
+                                <li><strong>专业：</strong>商务数据分析与应用</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -870,92 +900,95 @@
                 项目案例展示
             </h2>
 
-            <!-- 案例轮播图 -->
-            <div class="projects-carousel animate-on-scroll">
-                <div class="carousel-container" id="projectsCarousel">
-                    <!-- 案例 0 - 电商平台销售数据分析 -->
-                    <div class="carousel-item glass-card">
-                        <div class="project-icon">
+            <!-- 项目案例卡片 -->
+            <div class="projects-grid">
+                <!-- 项目 1 - 电商平台销售数据分析 -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-header">
+                        <div class="project-icon-large">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
-                        <h3>某电商平台销售数据分析</h3>
-                        <p class="project-date">2024.01-2024.02</p>
-                        <p>分析电商平台销售数据，识别销售趋势和热点商品，为运营决策提供数据支持。</p>
-                        <div class="project-tags">
-                            <span class="tag-small"><i class="fab fa-python"></i> Python</span>
-                            <span class="tag-small"><i class="fab fa-python"></i> Pandas</span>
-                            <span class="tag-small"><i class="fas fa-chart-line"></i> Power BI</span>
+                        <div class="project-title-section">
+                            <h3>某电商平台销售数据分析</h3>
+                            <p class="project-meta">
+                                <i class="far fa-calendar-alt"></i> 2024.01-2024.02
+                            </p>
                         </div>
-                        <div class="project-result">
-                            <i class="fas fa-trophy"></i>
-                            <strong>成果：</strong>识别关键销售趋势，针对性优化运营策略，<span class="highlight-result">提高核心品类销售额10%</span>
-                        </div>
-                        <button class="btn btn-small btn-outline">
-                            <i class="fas fa-external-link-alt"></i> 查看详情
-                        </button>
                     </div>
-                    <!-- 案例 1 -->
-                    <div class="carousel-item glass-card">
-                        <div class="project-icon">
-                            <i class="fas fa-chart-pie"></i>
+                    
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4><i class="fas fa-exclamation-circle"></i> 挑战</h4>
+                            <p>业务方难以识别销售趋势，运营策略缺乏数据依据，导致资源分配不合理。</p>
                         </div>
-                        <h3>销售数据分析仪表盘</h3>
-                        <p>使用 Python 和 Matplotlib 制作的销售数据可视化仪表盘，展示销售趋势、产品分布、区域业绩等信息。</p>
-                        <div class="project-tags">
-                            <span class="tag-small">Python</span>
-                            <span class="tag-small">Matplotlib</span>
-                            <span class="tag-small">数据可视化</span>
+                        
+                        <div class="project-section">
+                            <h4><i class="fas fa-tasks"></i> 任务</h4>
+                            <p>深入分析销售数据，识别销售趋势和热点商品，为运营决策提供数据支持。</p>
                         </div>
-                        <button class="btn btn-small btn-outline">
-                            <i class="fas fa-external-link-alt"></i> 查看详情
-                        </button>
+                        
+                        <div class="project-section">
+                            <h4><i class="fas fa-lightbulb"></i> 方案</h4>
+                            <p>使用Python进行数据清洗，利用Pandas分析销售趋势，识别热点商品，构建销售预测模型。</p>
+                        </div>
+                        
+                        <div class="project-result-full">
+                            <h4><i class="fas fa-trophy"></i> 成果</h4>
+                            <p>输出分析报告，针对性优化运营策略，<span class="highlight-result">提高核心品类销售额10%</span>，为业务增长提供了有力的数据支撑。</p>
+                        </div>
                     </div>
+                    
+                    <div class="project-tags">
+                        <span class="tag-small"><i class="fab fa-python"></i> Python</span>
+                        <span class="tag-small"><i class="fab fa-python"></i> Pandas</span>
+                        <span class="tag-small"><i class="fas fa-chart-line"></i> Power BI</span>
+                        <span class="tag-small"><i class="fas fa-chart-bar"></i> 数据可视化</span>
+                    </div>
+                </div>
 
-                    <!-- 案例 2 -->
-                    <div class="carousel-item glass-card">
-                        <div class="project-icon">
-                            <i class="fas fa-spider"></i>
-                        </div>
-                        <h3>电商商品数据采集系统</h3>
-                        <p>使用 Scrapy 框架开发的电商商品数据采集系统，自动采集商品信息、价格、销量等数据。</p>
-                        <div class="project-tags">
-                            <span class="tag-small">Scrapy</span>
-                            <span class="tag-small">Python</span>
-                            <span class="tag-small">数据采集</span>
-                        </div>
-                        <button class="btn btn-small btn-outline">
-                            <i class="fas fa-external-link-alt"></i> 查看详情
-                        </button>
-                    </div>
-
-                    <!-- 案例 3 -->
-                    <div class="carousel-item glass-card">
-                        <div class="project-icon">
+                <!-- 项目 2 - 库存优化分析 -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-header">
+                        <div class="project-icon-large">
                             <i class="fas fa-box"></i>
                         </div>
-                        <h3>库存优化分析报告</h3>
-                        <p>基于历史销售数据，使用统计方法进行库存需求预测，优化库存水平，降低库存成本。</p>
-                        <div class="project-tags">
-                            <span class="tag-small">Excel</span>
-                            <span class="tag-small">统计分析</span>
-                            <span class="tag-small">库存优化</span>
+                        <div class="project-title-section">
+                            <h3>供应链库存优化分析</h3>
+                            <p class="project-meta">
+                                <i class="far fa-calendar-alt"></i> 2024.03-2024.04
+                            </p>
                         </div>
-                        <button class="btn btn-small btn-outline">
-                            <i class="fas fa-external-link-alt"></i> 查看详情
-                        </button>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4><i class="fas fa-exclamation-circle"></i> 挑战</h4>
+                            <p>库存水平不合理，部分商品缺货严重，部分商品积压过多，导致资金占用和客户满意度下降。</p>
+                        </div>
+                        
+                        <div class="project-section">
+                            <h4><i class="fas fa-tasks"></i> 任务</h4>
+                            <p>基于历史销售数据，进行库存需求预测，优化库存水平，降低库存成本。</p>
+                        </div>
+                        
+                        <div class="project-section">
+                            <h4><i class="fas fa-lightbulb"></i> 方案</h4>
+                            <p>使用Excel进行数据整理，应用统计方法进行需求预测，建立安全库存模型。</p>
+                        </div>
+                        
+                        <div class="project-result-full">
+                            <h4><i class="fas fa-trophy"></i> 成果</h4>
+                            <p>优化库存结构，<span class="highlight-result">降低库存成本15%</span>，同时提高订单满足率，改善客户体验。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="tag-small"><i class="fas fa-file-excel"></i> Excel</span>
+                        <span class="tag-small"><i class="fas fa-calculator"></i> 统计分析</span>
+                        <span class="tag-small"><i class="fas fa-box"></i> 库存优化</span>
+                        <span class="tag-small"><i class="fas fa-truck"></i> 供应链</span>
                     </div>
                 </div>
-
-                <div class="carousel-controls">
-                    <button class="carousel-btn" id="prevProject">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="carousel-btn" id="nextProject">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-
-                <div class="carousel-dots" id="carouselDots"></div>
             </div>
 
             <!-- 作品案例网格 -->
